@@ -1,0 +1,4 @@
+# IDE配置
+.idea/
+.vscode/
+_pycache
