@@ -15,7 +15,7 @@ from torch import nn
 def train_val_data_process():#处理训练集和验证集
     train_data = FashionMNIST(root='./data',
                               train=True,
-                              transform=transforms.Compose([transforms.Resize(size=28), transforms.ToTensor()]),#设置输入图片大小
+                              transform=transforms.Compose([transforms.Resize(size=28), transforms.ToTensor()]),#设置输入图片大小,并将其转换成张量，输出到模型中
                               download=True)
 
     train_data, val_data = Data.random_split(train_data, [round(0.8 * len(train_data)), round(0.2 * len(train_data))])
