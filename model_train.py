@@ -19,7 +19,6 @@ def train_val_data_process():#处理训练集和验证集
                               download=True)
 
     train_data, val_data = Data.random_split(train_data, [round(0.8 * len(train_data)), round(0.2 * len(train_data))])
-
     train_loader = Data.DataLoader(dataset=train_data,
                                    batch_size=64,
                                    shuffle=True,
